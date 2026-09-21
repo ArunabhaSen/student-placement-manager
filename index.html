@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Student Placement Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Placement Manager</h1>
+
+        <p>
+            A simple placement management system
+        </p>
+    </header>
+
+
+    <main>
+
+        <!-- Student Form -->
+
+        <section class="card">
+
+            <h2>Add Student</h2>
+
+            <form id="studentForm">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Student Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="branch"
+                    placeholder="Branch"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="cgpa"
+                    placeholder="CGPA"
+                    step="0.01"
+                    min="0"
+                    max="10"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="graduation_year"
+                    placeholder="Graduation Year"
+                    required
+                >
+
+                <button type="submit">
+                    Add Student
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Students -->
+
+        <section class="card">
+
+            <h2>Students</h2>
+
+            <button onclick="loadStudents()">
+                Refresh Students
+            </button>
+
+            <div id="students"></div>
+
+        </section>
+
+
+        <!-- Companies -->
+
+        <section class="card">
+
+            <h2>Companies</h2>
+
+            <button onclick="loadCompanies()">
+                Refresh Companies
+            </button>
+
+            <div id="companies"></div>
+
+        </section>
+
+
+        <!-- Application -->
+
+        <section class="card">
+
+            <h2>Apply for Company</h2>
+
+            <form id="applicationForm">
+
+                <select id="student_id" required>
+                    <option value="">
+                        Select Student
+                    </option>
+                </select>
+
+                <select id="company_id" required>
+                    <option value="">
+                        Select Company
+                    </option>
+                </select>
+
+                <button type="submit">
+                    Submit Application
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- Applications -->
+
+        <section class="card">
+
+            <h2>Applications</h2>
+
+            <button onclick="loadApplications()">
+                Refresh Applications
+            </button>
+
+            <div id="applications"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            Student Placement Manager |
+            HTML | CSS | JavaScript | Node.js | MySQL
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
